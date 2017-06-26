@@ -2,10 +2,13 @@ import React from 'react';
 import {
   AppRegistry,
   Text,
-  View
+  View,
   Button,
+  Platform,
 } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import { StackNavigator, TabNavigator } from 'react-navigation';
+
+import OptionsScreen from './src/Components/OptionsScreen';
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -15,33 +18,18 @@ class HomeScreen extends React.Component {
     const { navigate } = this.props.navigation;
     return (
       <View>
-        <Text>Hello, Chat App!</Text>
         <Button
-          onPress={() => navigate('Chat')}
-          title="Chat with Lucy"
+          onPress={() => navigate('Options')}
+          title="Enter"
         />
       </View>
     );
   }
 }
 
-
-  class ChatScreen extends React.Component {
-    static navigationOptions = {
-      title: 'Chat with Lucy',
-    };
-    render() {
-      return (
-        <View>
-          <Text>Chat with Lucy</Text>
-        </View>
-      );
-    }
-  }
-
-  const ReactNavApp = StackNavigator({
+const ReactNavApp = StackNavigator({
     Home: { screen: HomeScreen },
-    Chat: { screen: ChatScreen },
-  });
+    Options: { screen: OptionsScreen },
+});
 
 AppRegistry.registerComponent('ReactNavApp', () => ReactNavApp);
