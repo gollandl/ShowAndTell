@@ -13,12 +13,12 @@ import ShareScreen from './ShareScreen';
 
 
 const OptionsScreen = TabNavigator({
-  Chat: { screen: ChatScreen },
-  Share: { screen: ShareScreen },
+  Elec: { screen: ChatScreen },
+  Gas: { screen: ShareScreen },
 }, {
     tabBarOptions: {
       activeTintColor: (Platform.OS === 'ios') ? '#007AFF' : '#00bcd4',
-      activeBackgroundColor: (Platform.OS === 'ios') ? 'transparent' : 'white',
+      activeBackgroundColor: (Platform.OS === 'ios') ? 'blue' : 'blue',
       inactiveTintColor: (Platform.OS === 'ios') ? '#616161' : 'white',
       inactiveBackgroundColor: (Platform.OS === 'ios') ? 'transparent' : 'white',
       showIcon: true,
@@ -27,9 +27,9 @@ const OptionsScreen = TabNavigator({
         fontSize: 10,
       },
     },
-    tabBarPosition: 'bottom',
+    tabBarPosition: 'top',
     swipeEnabled: true,
-    initialRouteName: 'Chat',
+    initialRouteName: 'Gas',
   });
 
   export default OptionsScreen;
