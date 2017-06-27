@@ -39,6 +39,7 @@ class HomeScreen extends React.Component {
 const ReactNavApp = StackNavigator({
     Home: { screen: HomeScreen },
     Options: { screen: OptionsScreen },
+    
 });
 
 

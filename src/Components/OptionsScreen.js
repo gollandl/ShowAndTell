@@ -5,6 +5,7 @@ import {
   View,
   Button,
   Platform,
+  Icon,
 } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
@@ -14,17 +15,22 @@ import ShareScreen from './ShareScreen';
 
 const OptionsScreen = TabNavigator({
   Elec: { screen: ChatScreen },
+  icon:({tintColor}) => <Icon name="list" size={20} color={tintColor}/>
+
   Gas: { screen: ShareScreen },
+  icon:({tintColor}) => <Icon name="list" size={20} color={tintColor}/>
+
+
 }, {
     tabBarOptions: {
-      activeTintColor: (Platform.OS === 'ios') ? '#007AFF' : '#00bcd4',
-      activeBackgroundColor: (Platform.OS === 'ios') ? 'blue' : 'blue',
+      activeTintColor: (Platform.OS === 'ios') ? 'white' : 'white',
+      activeBackgroundColor: (Platform.OS === 'ios') ? '#40A8F5' : '#40A8F5',
       inactiveTintColor: (Platform.OS === 'ios') ? '#616161' : 'white',
       inactiveBackgroundColor: (Platform.OS === 'ios') ? 'transparent' : 'white',
       showIcon: true,
       showLabel: true,
       labelStyle: {
-        fontSize: 10,
+      fontSize: 18,
       },
     },
     tabBarPosition: 'top',

@@ -49,9 +49,11 @@ class ShareScreen extends React.Component {
 
         <Button style={styles.topup2}
           onPress={() => navigate('Options')}
-          title="Top up"
+          title="Top up"/>
 
-        />
+          <Button style={styles.topup2}
+            onPress={() => navigate('Home')}
+            title="Log Out"/>
 
           </View>
       );
@@ -117,6 +119,7 @@ class ShareScreen extends React.Component {
   amount:{
     fontSize:70,
     color:'black',
+    marginLeft:75,
   },
 
   poundPicker:{
