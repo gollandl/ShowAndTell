@@ -12,13 +12,11 @@ import {
 
 } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
-//import {Icon} from 'react-native-elements';
 
 class ChatScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Elec',
     title: 'Electricity',
-    icon:({tintColor}) => <Icon name="list" size={20} color={tintColor}/>
   };
   render() {
     const { navigate } = this.props.navigation;

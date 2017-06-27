@@ -15,10 +15,8 @@ import ShareScreen from './ShareScreen';
 
 const OptionsScreen = TabNavigator({
   Elec: { screen: ChatScreen },
-  icon:({tintColor}) => <Icon name="list" size={20} color={tintColor}/>
 
   Gas: { screen: ShareScreen },
-  icon:({tintColor}) => <Icon name="list" size={20} color={tintColor}/>
 
 
 }, {

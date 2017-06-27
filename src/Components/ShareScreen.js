@@ -119,7 +119,7 @@ class ShareScreen extends React.Component {
   amount:{
     fontSize:70,
     color:'black',
-    marginLeft:75,
+    marginLeft:58,
   },
 
   poundPicker:{
