@@ -9,11 +9,12 @@ import {
   TouchableHighlight,
   TextInput,
   Icons,
+  Image,
 
 } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
-class ChatScreen extends React.Component {
+class TopupScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Elec',
     title: 'Electricity',
@@ -24,43 +25,30 @@ class ChatScreen extends React.Component {
         <View>
 
           <Text style={styles.text}> Smart Card number:12345678912345678 </Text>
-          <View style={styles.balance}>
-          <Text style={styles.bold}>Balance</Text>
-          <Text style={styles.cost}>£36.00</Text>
-        </View>
 
-        <Text style={styles.indent}>On 12 Dec 2017 at 21:08 </Text>
-        <Button style={styles.topup}
-          onPress={() => navigate('Topup')}
-          title="Top up History"
-        />
+          <Text style={styles.list}> Recent transactions</Text>
+          <Text style={styles.subheading}>This years amounts:</Text>
+          <View syle={styles.transactions}>
+            <Text style={styles.transactions}>19 Jan    2017                    £22.00</Text>
+            <Text style={styles.transactions}>30 Feb   2017                    £19.50</Text>
+            <Text style={styles.transactions}>15 Mrch 2017                    £17.25</Text>
+            <Text style={styles.transactions}>03 Apl   2017                    £25.99</Text>
+            <Text style={styles.transactions}>28 Apl   2017                    £17.56</Text>
+          </View>
 
-        <Text style={styles.bold}>Choose amount</Text>
-        <Text style={styles.indent}>Top up at least £5- no more than£99</Text>
 
-        <View style={styles.balance}>
-        <Text style={styles.pound}>£</Text>
-        <Text style={styles.amount}>05.00</Text>
-      </View>
 
-      <View style={styles.balance}>
-      <Text style={styles.indent}> You last topped up: </Text>
-      <Text style={styles.price}> £50 </Text>
-      </View>
-      <Text style={styles.indent}> On 5 November 2017 at 16:40pm </Text>
 
       <Button style={styles.topup2}
-        onPress={() => navigate('Thank')}
-        title="Top up"
-
-      />
+        onPress={() => navigate('Options')}
+        title="Make new Top up"/>
 
 
       <Button style={styles.topup2}
         onPress={() => navigate('Home')}
         title="Log Out"/>
 
-
+        
         </View>
     );
   }
@@ -143,9 +131,34 @@ price:{
 topup2:{
   color:'lime',
   fontSize:40,
+},
 
+list:{
+  marginLeft:30,
+  fontSize:20,
+  color:'navy',
 
 },
+
+transactions:{
+
+  marginLeft:20,
+  marginBottom:10,
+
+},
+subheading:{
+  fontSize:15,
+  marginBottom:10,
+},
+pic: {
+  flexGrow:1,
+  width:350,
+  height:270,
+  alignSelf:'center',
+  flexBasis:'27%',
+  marginBottom:50,
+},
+
 
 })
 
@@ -155,4 +168,4 @@ topup2:{
 
 
 
-export default ChatScreen;
+export default TopupScreen;

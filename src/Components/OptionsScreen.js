@@ -11,7 +11,7 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import ChatScreen from './ChatScreen';
 import ShareScreen from './ShareScreen';
-
+import TopupScreen from './TopupScreen';
 
 const OptionsScreen = TabNavigator({
   Elec: { screen: ChatScreen },

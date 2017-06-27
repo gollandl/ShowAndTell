@@ -29,7 +29,7 @@ class ShareScreen extends React.Component {
 
           <Text style={styles.indent}>On 09 Aug 2017 at 13:10 </Text>
           <Button style={styles.topup}
-            onPress={() => navigate('Options')}
+            onPress={() => navigate('Topup')}
             title="Top up History"
           />
 
@@ -48,7 +48,7 @@ class ShareScreen extends React.Component {
         <Text style={styles.indent}> On 11 October 2017 at 11:15pm </Text>
 
         <Button style={styles.topup2}
-          onPress={() => navigate('Options')}
+          onPress={() => navigate('Thank')}
           title="Top up"/>
 
           <Button style={styles.topup2}

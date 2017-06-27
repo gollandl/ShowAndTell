@@ -12,6 +12,8 @@ import {
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import OptionsScreen from './src/Components/OptionsScreen';
+import TopupScreen from './src/Components/TopupScreen';
+import ThankScreen from './src/Components/ThankScreen';
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -39,7 +41,8 @@ class HomeScreen extends React.Component {
 const ReactNavApp = StackNavigator({
     Home: { screen: HomeScreen },
     Options: { screen: OptionsScreen },
-    
+    Topup: {screen: TopupScreen},
+    Thank:{screen:ThankScreen},
 });
 
 
