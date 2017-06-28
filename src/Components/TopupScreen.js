@@ -38,17 +38,15 @@ class TopupScreen extends React.Component {
 
 
 
+        <TouchableHighlight onPress={() => navigate('Options')} style={styles.touch}>
+          <Text style={styles.buttonText}>Make new Top up</Text>
+        </TouchableHighlight>
 
-      <Button style={styles.topup2}
-        onPress={() => navigate('Options')}
-        title="Make new Top up"/>
 
+        <TouchableHighlight onPress={() => navigate('Home')} style={styles.touch}>
+                  <Text style={styles.buttonText}>Log out</Text>
+                </TouchableHighlight>
 
-      <Button style={styles.topup2}
-        onPress={() => navigate('Home')}
-        title="Log Out"/>
-
-        
         </View>
     );
   }
@@ -159,6 +157,21 @@ pic: {
   marginBottom:50,
 },
 
+touch:{
+  height:30,
+  width:350,
+  backgroundColor:'#7CE157',
+  justifyContent:'center',
+  alignSelf:'center',
+  marginTop:20,
+},
+buttonText:{
+  flex:1,
+  color:'white',
+  fontSize:15,
+  fontWeight:"400",
+  alignSelf:'center',
+},
 
 })
 

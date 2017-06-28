@@ -25,15 +25,14 @@ class ThankScreen extends React.Component {
         <View>
 
           <Text style={styles.text}> Smart Card number:12345678912345678 </Text>
-      
+
+
 
             <Text style={styles.thank}>Thank you for your payment</Text>
 
-
-      <Button style={styles.topup2}
-        onPress={() => navigate('Home')}
-        title="Log Out"/>
-
+        <TouchableHighlight onPress={() => navigate('Home')} style={styles.touch}>
+                  <Text style={styles.buttonText}>Log out</Text>
+                </TouchableHighlight>
 
         </View>
     );
@@ -145,11 +144,33 @@ pic: {
   marginBottom:50,
 },
 thank:{
+  marginTop:70,
+  marginBottom:40,
   fontSize:40,
   color:'navy',
   justifyContent:'center',
   textAlign:'center',
+  alignItems:'center',
 },
+touch:{
+  height:40,
+  width:330,
+  marginLeft:20,
+  backgroundColor:'#7CE157',
+  justifyContent:'center',
+},
+buttonText:{
+  flex:1,
+  color:'white',
+  fontSize:25,
+  fontWeight:"400",
+  alignSelf:'center',
+},
+pic:{
+  height:220,
+  width:220,
+},
+
 
 })
 

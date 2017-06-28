@@ -23,7 +23,7 @@ const OptionsScreen = TabNavigator({
     tabBarOptions: {
       activeTintColor: (Platform.OS === 'ios') ? 'white' : 'white',
       activeBackgroundColor: (Platform.OS === 'ios') ? '#40A8F5' : '#40A8F5',
-      inactiveTintColor: (Platform.OS === 'ios') ? '#616161' : 'white',
+      inactiveTintColor: (Platform.OS === 'ios') ? '#616161' : '#40A8F5',
       inactiveBackgroundColor: (Platform.OS === 'ios') ? 'transparent' : 'white',
       showIcon: true,
       showLabel: true,
