@@ -5,31 +5,35 @@ import {
   View,
   Button,
   Platform,
+  Icon,
 } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import ChatScreen from './ChatScreen';
 import ShareScreen from './ShareScreen';
-
+import TopupScreen from './TopupScreen';
 
 const OptionsScreen = TabNavigator({
-  Chat: { screen: ChatScreen },
-  Share: { screen: ShareScreen },
+  Elec: { screen: ChatScreen },
+
+  Gas: { screen: ShareScreen },
+
+
 }, {
     tabBarOptions: {
-      activeTintColor: (Platform.OS === 'ios') ? '#007AFF' : '#00bcd4',
-      activeBackgroundColor: (Platform.OS === 'ios') ? 'transparent' : 'white',
-      inactiveTintColor: (Platform.OS === 'ios') ? '#616161' : 'white',
+      activeTintColor: (Platform.OS === 'ios') ? 'white' : 'white',
+      activeBackgroundColor: (Platform.OS === 'ios') ? '#40A8F5' : '#40A8F5',
+      inactiveTintColor: (Platform.OS === 'ios') ? '#616161' : '#40A8F5',
       inactiveBackgroundColor: (Platform.OS === 'ios') ? 'transparent' : 'white',
       showIcon: true,
       showLabel: true,
       labelStyle: {
-        fontSize: 10,
+      fontSize: 18,
       },
     },
-    tabBarPosition: 'bottom',
+    tabBarPosition: 'top',
     swipeEnabled: true,
-    initialRouteName: 'Chat',
+    initialRouteName: 'Gas',
   });
 
   export default OptionsScreen;

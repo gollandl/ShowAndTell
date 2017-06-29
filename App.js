@@ -8,10 +8,13 @@ import {
   Image,
   TextInput,
   StyleSheet,
+  TouchableHighlight,
 } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import OptionsScreen from './src/Components/OptionsScreen';
+import TopupScreen from './src/Components/TopupScreen';
+import ThankScreen from './src/Components/ThankScreen';
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -27,10 +30,11 @@ class HomeScreen extends React.Component {
         <TextInput style={styles.textinput} placeholder={'Username'} placeholderTextColor={"rgba(198,198,204,1)"}/>
         <TextInput style={styles.textinput} placeholder={'Password'} placeholderTextColor={"rgba(198,198,204,1)"}secureTextEntry ref={(input) => this.passwordInput = input}/>
 
-        <Button
-          onPress={() => navigate('Options')}
-          title="Login"
-        />
+      <TouchableHighlight onPress={() => navigate('Options')} style={styles.touch}>
+                      <Text style={styles.buttonText}>Login</Text>
+                    </TouchableHighlight>
+
+
       </View>
     );
   }
@@ -39,6 +43,8 @@ class HomeScreen extends React.Component {
 const ReactNavApp = StackNavigator({
     Home: { screen: HomeScreen },
     Options: { screen: OptionsScreen },
+    Topup: {screen: TopupScreen},
+    Thank:{screen:ThankScreen},
 });
 
 
@@ -71,6 +77,24 @@ container:{
   justifyContent:'center',
   marginTop:100,
 },
+touch:{
+  height:35,
+  width:250,
+  backgroundColor:'#7CE157',
+  justifyContent:'center',
+  marginTop:20,
+},
+buttonText:{
+  flex:1,
+  color:'white',
+  fontSize:15,
+  fontWeight:"400",
+  alignSelf:'center',
+  justifyContent:'center',
+},
+
+
+
 })
 
 AppRegistry.registerComponent('ReactNavApp', () => ReactNavApp);
