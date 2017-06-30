@@ -11,6 +11,10 @@ const DrawerButton = ({ navigate }) => (
   <Button title='Menu' onPress={() => navigate('DrawerOpen')} />
 );
 
+const HomeButton = ({ navigate }) => (
+  <Button title='Home' onPress={() => navigate('TabBar')} />
+);
+
 const StackNav = StackNavigator({
     Home: {
         screen: HomeScreen,
@@ -24,7 +28,10 @@ const StackNav = StackNavigator({
       headertitle: 'Top Up',
     }),
     },
-    Topup: { screen: TopUpScreen },
+    Topup: { screen: TopUpScreen,
+      navigationOptions: ({ navigation }) => ({
+      headerRight : <HomeButton navigate={navigation.navigate} />,
+    }), },
     Thank: { screen: ThankScreen },
 });
 
