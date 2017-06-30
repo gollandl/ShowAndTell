@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  AppRegistry,
   Text,
   View,
   Button,
@@ -9,15 +8,14 @@ import {
   TouchableHighlight,
   TextInput,
   Icons,
-
 } from 'react-native';
-import { StackNavigator, TabNavigator } from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 
-class ChatScreen extends React.Component {
+class ElecScreen extends React.Component {
   static navigationOptions = {
-    tabBarLabel: 'Elec',
     title: 'Electricity',
-  };
+  }
+
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -62,7 +60,6 @@ class ChatScreen extends React.Component {
       <Button style={styles.topup2}
         onPress={() => navigate('Home')}
         title="Log Out"/>
-
 
         </View>
     );
@@ -195,9 +192,4 @@ grey2:{
 })
 
 
-
-
-
-
-
-export default ChatScreen;
+export default ElecScreen;

@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  AppRegistry,
   Text,
   View,
   Button,
@@ -8,15 +7,14 @@ import {
   StyleSheet,
   Picker,
   TouchableHighlight,
-
 } from 'react-native';
-import { StackNavigator, TabNavigator } from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 
-class ShareScreen extends React.Component {
-  static navigationOptions = {
-    tabBarLabel: 'Gas',
+class GasScreen extends React.Component {
+  static navigationOptions =  {
     title: 'Gas',
-  };
+  }
+
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -191,6 +189,4 @@ class ShareScreen extends React.Component {
   },
   })
 
-
-
-export default ShareScreen;
+export default GasScreen;

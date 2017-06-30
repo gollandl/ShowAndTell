@@ -15,10 +15,7 @@ import {
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
 class ThankScreen extends React.Component {
-  static navigationOptions = {
-    tabBarLabel: 'Elec',
-    title: 'Electricity',
-  };
+
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -173,11 +170,5 @@ pic:{
 
 
 })
-
-
-
-
-
-
 
 export default ThankScreen;
