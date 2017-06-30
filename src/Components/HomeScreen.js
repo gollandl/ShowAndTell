@@ -1,52 +1,35 @@
 import React from 'react';
 import {
-  AppRegistry,
   Text,
   View,
   Button,
-  Platform,
   Image,
-  TextInput,
+  Platform,
   StyleSheet,
   TouchableHighlight,
+  TextInput,
+  Icons,
 } from 'react-native';
-import { StackNavigator, TabNavigator } from 'react-navigation';
-
-import OptionsScreen from './src/Components/OptionsScreen';
-import TopupScreen from './src/Components/TopupScreen';
-import ThankScreen from './src/Components/ThankScreen';
 
 class HomeScreen extends React.Component {
-  static navigationOptions = {
-    title: 'British Gas',
-  };
+
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Image style={styles.pic} source={require('./images/bg.png')}/>
+        <Image style={styles.pic} source={require('../../images/bg.png')}/>
         <Text style={styles.text}>Please login</Text>
 
         <TextInput style={styles.textinput} placeholder={'Username'} placeholderTextColor={"rgba(198,198,204,1)"}/>
         <TextInput style={styles.textinput} placeholder={'Password'} placeholderTextColor={"rgba(198,198,204,1)"}secureTextEntry ref={(input) => this.passwordInput = input}/>
 
-      <TouchableHighlight onPress={() => navigate('Options')} style={styles.touch}>
+      <TouchableHighlight onPress={() => navigate('TabBar')} style={styles.touch}>
                       <Text style={styles.buttonText}>Login</Text>
                     </TouchableHighlight>
-
-
       </View>
     );
   }
 }
-
-const ReactNavApp = StackNavigator({
-    Home: { screen: HomeScreen },
-    Options: { screen: OptionsScreen },
-    Topup: {screen: TopupScreen},
-    Thank:{screen:ThankScreen},
-});
-
 
 const styles = StyleSheet.create({
   pic: {
@@ -93,8 +76,6 @@ buttonText:{
   justifyContent:'center',
 },
 
-
-
 })
 
-AppRegistry.registerComponent('ReactNavApp', () => ReactNavApp);
+export default HomeScreen;

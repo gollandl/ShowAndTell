@@ -15,10 +15,7 @@ import {
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
 class TopupScreen extends React.Component {
-  static navigationOptions = {
-    tabBarLabel: 'Elec',
-    title: 'Electricity',
-  };
+
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -38,7 +35,7 @@ class TopupScreen extends React.Component {
 
 
 
-        <TouchableHighlight onPress={() => navigate('Options')} style={styles.touch}>
+        <TouchableHighlight onPress={() => navigate('TabBar')} style={styles.touch}>
           <Text style={styles.buttonText}>Make new Top up</Text>
         </TouchableHighlight>
 
@@ -174,11 +171,5 @@ buttonText:{
 },
 
 })
-
-
-
-
-
-
 
 export default TopupScreen;
