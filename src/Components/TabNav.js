@@ -2,12 +2,12 @@ import React from 'react';
 import { Platform,StyleSheet,Image } from 'react-native';
 import { TabNavigator, DrawerNavigator } from 'react-navigation';
 
-import ElecScreen from './ElecScreen';
-import GasScreen from './GasScreen';
+import ExpoScreen from './ExpoScreen';
+import FBScreen from './FBScreen';
 
 const TabScreen = TabNavigator({
   TabItem1: {
-      screen: GasScreen,
+      screen: FBScreen,
       navigationOptions: {
 
           tabBarIcon:({tintColor}) => (
@@ -19,7 +19,7 @@ const TabScreen = TabNavigator({
       }
   },
   TabItem2: {
-      screen: ElecScreen,
+      screen: ExpoScreen,
       navigationOptions: {
           tabBarIcon:({tintColor}) => (
       <Image

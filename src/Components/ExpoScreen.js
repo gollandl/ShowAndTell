@@ -4,13 +4,12 @@ import {
   View,
   Platform,
   StyleSheet,
-  Icons,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-class ElecScreen extends React.Component {
+class ExpoScreen extends React.Component {
   static navigationOptions = {
     title: 'Expo',
   }
@@ -42,4 +41,4 @@ flexBasis:'40%',
 })
 
 
-export default ElecScreen;
+export default ExpoScreen;

@@ -3,8 +3,8 @@ import { AppRegistry } from 'react-native';
 import { DrawerNavigator } from 'react-navigation';
 
 import StackNav from './StackNav';
-import ElecScreen from './ElecScreen';
-import GasScreen from './GasScreen';
+import ExpoScreen from './ExpoScreen';
+import FBScreen from './FBScreen';
 import TabNav from './TabNav';
 
 const ReactNavApp = DrawerNavigator({

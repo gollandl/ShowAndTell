@@ -2,13 +2,9 @@ import React from 'react';
 import {
   Text,
   View,
-  Button,
   Image,
   Platform,
   StyleSheet,
-  TouchableHighlight,
-  TextInput,
-  Icons,
   TouchableOpacity
 } from 'react-native';
 
@@ -39,8 +35,6 @@ const styles = StyleSheet.create({
     height:250,
     marginTop:100,
 },
-
-
 text:{
   justifyContent:'center',
   alignSelf:'center',

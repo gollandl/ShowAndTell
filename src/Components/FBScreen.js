@@ -2,17 +2,14 @@ import React from 'react';
 import {
   Text,
   View,
-  Button,
   Platform,
   StyleSheet,
-  Picker,
-  TouchableHighlight,
   Image,
   TouchableOpacity,
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-class GasScreen extends React.Component {
+class FBScreen extends React.Component {
   static navigationOptions =  {
     title: 'Facebook',
   }
@@ -45,4 +42,4 @@ marginLeft:40,
 
   })
 
-export default GasScreen;
+export default FBScreen;
